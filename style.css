@@ -1,0 +1,10 @@
+* {
+    background-color: #f0f0f0;
+    border: 1px solid red;
+    color: black;
+}
+
+.row {
+    outline: 1px solid gray;
+    background-color: white;
+}
