@@ -10,10 +10,10 @@ function makeGrid(gridSize) {
         // console.log(i);
         // console.log(row.className);
         for (let i = 0; i < gridSize; i++) {
-            let column = document.createElement("div");
-            column.setAttribute("class", "column");
-            // column.textContent = `C${i+1}`;
-            row.appendChild(column);
+            let cell = document.createElement("div");
+            cell.setAttribute("class", "cell");
+            // cell.textContent = `C${i+1}`;
+            row.appendChild(cell);
         }
     }
 }
