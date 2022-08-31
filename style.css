@@ -25,8 +25,8 @@ body {
 .cell {
     outline: 1px solid blue;
     background-color: lemonchiffon;
-    height: 10px;
-    width: 10px;
+    /* width: 10px;
+    height: 10px; */
     /* display: flex; */
 }
 
