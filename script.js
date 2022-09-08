@@ -1,5 +1,5 @@
 function makeGrid(gridSize) {
-    let gridDimensions = 300/gridSize;
+    let gridDimensions = 500/gridSize;
     let gridBox = document.querySelector("#grid-box");
         for (let i = 0; i < gridSize; i++) {
             let row = document.createElement('div');
@@ -13,8 +13,7 @@ function makeGrid(gridSize) {
                 cell.style.height = `${gridDimensions}` + `px`
                 row.appendChild(cell);
         }
-    
     }
 }
 
-makeGrid(4);
+makeGrid(16);
