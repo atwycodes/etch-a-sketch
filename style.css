@@ -2,14 +2,28 @@
     background-color: silver;
     /* border: 1px solid red; */
     color: black;
+    font-family: 'Roboto', serif;
 }
 
 body {
+    text-align: center;
+    margin: 0px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 600;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: oldlace;
+}
+
+.content {
     display: flex;
     align-items: stretch;
     justify-content: center;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    padding-top: 5%;
+    padding-bottom: 15%;
     gap: 5%;
     flex-wrap: wrap;
 }
@@ -30,7 +44,7 @@ body {
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: white;
+    background-color: oldlace;
     width: 200px
 }
 
@@ -41,7 +55,7 @@ body {
 
 .cell {
     outline: 1px solid black;
-    background-color: white;
+    background-color: oldlace;
     /* width: 10px;
     height: 10px; */
     /* display: flex; */
