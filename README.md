@@ -11,7 +11,7 @@ Concepts explored & practiced include:
 
 To do list:
 - [x] Color Picker to choose own color
-- [ ] Clear button will clear grid to default state
+- [x] Clear button will clear grid to default state
 - [ ] Eraser mode to set brush to default grid color 
 - [ ] Random Color button for a "rainbow brush" effect
 - [ ] Slider for dynamic grid creation
