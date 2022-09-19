@@ -1,6 +1,5 @@
 //EVENT LISTENERS
 
-
 // GENERATE GRID & ATTACH EVENT LISTENERS
 function makeGrid(gridSize) {
     let gridBox = document.querySelector('#grid-box');
@@ -17,7 +16,7 @@ function makeGrid(gridSize) {
                 cell.style.height = `${gridDimensions}` + `px`
                 row.appendChild(cell);
                 // attach event listener in each cell
-                cell.addEventListener('click', () => colourCell('value'))
+                cell.addEventListener('mouseover', () => colourCell(cell))
         }
     }
 }
@@ -27,6 +26,7 @@ let userColour = document.querySelector('#user-colour')
 userColour.addEventListener('input', () => console.log(userColour.value));
 
 function colourCell(cell) {
+    cell.style.backgroundColor = `${userColour.value}`
 }
 
 // TEST AREA
