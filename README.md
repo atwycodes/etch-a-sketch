@@ -15,3 +15,4 @@ To do list:
 - [ ] Eraser mode to set brush to default grid color 
 - [ ] Random Color button for a "rainbow brush" effect
 - [ ] Slider for dynamic grid creation
+- [ ] Final CSS touch up (shadows, subtle transitions/animations)
