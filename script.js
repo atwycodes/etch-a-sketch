@@ -4,19 +4,19 @@ let gridSize = 16
 let gridBox = document.querySelector('#grid-box');
 function makeGrid(gridSize) {
     let gridDimensions = 500/gridSize;
-        for (let i = 0; i < gridSize; i++) {
-            let row = document.createElement('div');
-            row.setAttribute('class', 'row');
-            gridBox.appendChild(row);
+    for (let i = 0; i < gridSize; i++) {
+        let row = document.createElement('div');
+        row.setAttribute('class', 'row');
+        gridBox.appendChild(row);
             
-            for (let i = 0; i < gridSize; i++) {
-                let cell = document.createElement('div');
-                cell.setAttribute('class', 'cell');
-                cell.style.width = `${gridDimensions}` + `px`
-                cell.style.height = `${gridDimensions}` + `px`
-                row.appendChild(cell);
-                // attach event listener in each cell for colouring
-                cell.addEventListener('mouseover', () => colourCell(cell))
+        for (let i = 0; i < gridSize; i++) {
+            let cell = document.createElement('div');
+            cell.setAttribute('class', 'cell');
+            cell.style.width = `${gridDimensions}` + `px`
+            cell.style.height = `${gridDimensions}` + `px`
+            row.appendChild(cell);
+            // attach event listener in each cell for colouring
+            cell.addEventListener('mouseover', () => colourCell(cell))
         }
     }
 }
@@ -27,6 +27,11 @@ userColour.addEventListener('input', () => console.log(userColour.value));
 
 function colourCell(cell) {
     cell.style.backgroundColor = `${userColour.value}`
+}
+
+//ERASER MODE
+function eraseCell(cell) {
+    cell.style.backgroundColor = '#fdf5e6'
 }
 
 //CLEAR DRAWING GRID
