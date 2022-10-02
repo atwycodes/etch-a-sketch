@@ -1,8 +1,7 @@
 // GENERATE GRID & ATTACH EVENT LISTENERS
 let gridSize = 16
-let totalCells = gridSize * gridSize;
-let gridBox = document.querySelector('#grid-box');
-
+const totalCells = gridSize * gridSize;
+const gridBox = document.querySelector('#grid-box');
 const collection = document.getElementsByClassName('cell');
 
 function makeGrid(gridSize) {
@@ -28,23 +27,40 @@ function makeGrid(gridSize) {
     }
 }
 
-//COLOUR & ERASER MODE
-let colourMode = document.querySelector('#user-colour')
-colourMode.addEventListener('input', () => console.log(colourMode.value));
+//DEFINING THE MODES
+let currentMode = 'default'
 
-function colourCell(cell) {
-    cell.style.backgroundColor = `${colourMode.value}`
+const colourMode = document.querySelector('#user-colour');
+colourMode.addEventListener('click', () => activateMode(colourMode))
+
+const eraserMode = document.querySelector('#eraser-mode');
+eraserMode.addEventListener('click', () => activateMode(eraserMode));
+
+const randomMode = document.querySelector('#random-mode');
+randomMode.addEventListener('click', () => activateMode(randomMode));
+
+function activateMode(selectedMode,otherMode1,otherMode2) {
+     selectedMode.classList.add('active');
+     otherMode1.classList.remove('active');
+     otherMode2.classList.remove('active');
 }
 
-let eraserMode = document.querySelector('#eraser-mode')
-eraserMode.addEventListener('input', () => console.log('eraser mode activated'));
-
-function eraseCell(cell) {
-    cell.style.backgroundColor = '#fdf5e6'
+// pending active state logic
+function colourCell(cell) {
+    if (currentMode === 'default') {
+        cell.style.backgroundColor = `${colourMode.value}`; 
+    } else if (currentMode === 'colour') {
+        cell.style.backgroundColor = `${colourMode.value}`; 
+    } else if (randomMode === 'Random Mode') {
+        let randomColour = 
+        cell.style.backgroundColor = `${randomColour}`;
+    } else if (eraserMode === 'Eraser Mode') {
+        cell.style.backgroundColor = `#fdf5e6`;
+    }
 }
 
 //CLEAR DRAWING GRID
-let clearButton = document.querySelector('#clear')
+const clearButton = document.querySelector('#clear')
 clearButton.addEventListener('click', () => clearGrid(totalCells));
 
 function clearGrid(totalCells) {
@@ -56,16 +72,3 @@ function clearGrid(totalCells) {
 
 // TEST AREA
 makeGrid(gridSize);
-
-let currentMode = 'default'
-
-// Conditions to change color
-if (currentMode === 'default') {
-    let currentColour = `${colourMode.value}`; 
-} else if (currentMode === 'colour') {
-    let currentColour = `${colourMode.value}`; 
-} else if (currentMode === 'random') {
-    let currentColour = ``; 
-} else if (currentMode === 'eraser') {
-    let currentColour = `#fdf5e6`;
-}
