@@ -46,6 +46,7 @@ body {
 .btn-input {
     color: black;
     border: 2px solid black;
+    background-color: #fdf5e6;
     cursor: pointer;
     font-size: 24px;
     border-radius: 10px;
@@ -53,7 +54,6 @@ body {
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #fdf5e6;
     width: 200px
 }
 
@@ -74,4 +74,10 @@ body {
     border: 1px groove rgba(0, 0, 0, 0.2);
     height: 500px;
     width: 500px;
+}
+
+.active {
+    color: white;
+    border: 2px solid white;
+    background-color: black;
 }
