@@ -12,7 +12,8 @@ Concepts explored & practiced include:
 To do list:
 - [x] Color Picker to choose own color
 - [x] Clear button will clear grid to default state
-- [ ] Eraser mode to set brush to default grid color 
+- [x] Eraser mode to set brush to default grid color 
 - [ ] Random Color button for a "rainbow brush" effect
-- [ ] Slider for dynamic grid creation
+- [x] Slider for dynamic grid creation
 - [ ] Final CSS touch up (shadows, subtle transitions/animations)
+- [ ] To implement an alternative way of generating grid with a lower big O notation.
