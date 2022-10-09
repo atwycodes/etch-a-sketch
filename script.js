@@ -55,15 +55,23 @@ function activateMode(selectedMode,otherMode1,otherMode2) {
      otherMode2.classList.remove('active');
 }
 
+function getRandomColour() {
+    let letters = '0123456789ABCDEF';
+    let colour = '#';
+    for (i=0 ;i < 6 ; i++) {
+        colour += letters[Math.floor(Math.random()*16)];
+    }
+return colour
+}
+
 function colourCell(cell) {
     if (colourMode.className === 'active') {
         cell.style.backgroundColor = `${colourMode.value}`; 
-    } else if (eraserMode.className === 'btn-input active') {
-        let randomColour = ``;
-        cell.style.backgroundColor = `${randomColour}`;
     } else if (randomMode.className === 'btn-input active') {
+        let randomColour = getRandomColour();
+        cell.style.backgroundColor = `${randomColour}`;
+    } else if (eraserMode.className === 'btn-input active') {
         cell.style.backgroundColor = `#fdf5e6`;
     }
 }
 
-// TEST AREA
